@@ -82,7 +82,7 @@ less output.vcf
 
 ### 7. Calling variant
 ```
-bcstools -vmO -o output_call.vcf input_file.vcf
+bcftools -vmO -o output_call.vcf input_file.vcf
 ```
 
 ### Explanation
