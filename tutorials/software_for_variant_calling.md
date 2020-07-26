@@ -36,7 +36,7 @@ export PATH=$PATH:/path/of/your/bowtie2/directory/
 ## Installing Samtools
 
 ### Step One
-- Visit the samtools [official website](http://www.htslib.org/download/) to check the latest version availabel, we are currently using v
+- Visit the samtools [official website](http://www.htslib.org/download/) to check the latest version availabel, we are currently using v1.10
 
 #### Link to download via browser
 > http://www.htslib.org/download/
@@ -75,41 +75,32 @@ export PATH=$PATH:/path/of/your/samtools/directory
 ## Installing vcftools
 
 ### Step One
-- Visit the bcftools [official website](http://www.htslib.org/download/) to check the latest version availabel, we are currently using v
+- Visit the vcftools [official website](https://vcftools.github.io/downloads.html) to check the latest version availabel, we are currently using v0.1.17
 
 #### Link to download via browser
-> http://www.htslib.org/download/
+> https://vcftools.github.io/downloads.html
 
-#### Link to download via terminal
+#### github download
 ```
-wget https://github.com/samtools/bcftools/releases/download/1.10.2/bcftools-1.10.2.tar.bz2
+git clone https://github.com/vcftools/vcftools.git
 ```
 
 ### Step Two
-- Once you downloaded the file, extract it
+- Once you downloaded the file, extract it (If you have downloaded the zip file)
 ```
-tar -xf bcftools-1.10.2.tar.bz2
+unzip vcftools-vcftools-v0.1.16-18-g581c231.zip
 ```
 
 ### Step Three
 - Excute the following commands to compile and install. 
-- **--prefix** Be aware of that, if you want to install in current directory only, need not to give
+> if you want to rename the folder for ease, please do. Here I have kept has vcftools
 ```
-cd bcftools-1.10.2
+cd vcftools
+bash autogen.sh
 ./configure
-#./configure --prefix=/where/to/install
 make
 make install
 ````
-### Step Four
-- Source the path of these binary to bashrc
-
-```
-export PATH=$PATH:/path/of/your/bcftools/directory
-```
-
-
-
 -----------------------------------
 
 # bcftools
@@ -141,11 +132,6 @@ cd bcftools-1.10.2
 ./configure
 #./configure --prefix=/where/to/install
 make
-make install
+sudo make install
 ````
-### Step Four
-- Source the path of these binary to bashrc
-
-```
-export PATH=$PATH:/path/of/your/bcftools/directory
-```
+- sudo make install source the path as well
